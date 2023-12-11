@@ -1,4 +1,5 @@
 # Working with Branches
+Next section: [Handeling Conflicts](conflicts.md)
 
 ## What is a Branch?
 

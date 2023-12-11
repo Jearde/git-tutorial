@@ -1,4 +1,5 @@
-# Work with remotes (e.g. GitHub, GitLab)
+# Working with remotes (e.g. GitHub, GitLab)
+Next section: [Best Practices](best_practices.md)
 
 ## Differences between local and remote repositories
 - Local repositories are on your computer
@@ -60,6 +61,14 @@
     - Click on "New SSH key"
     - Paste the contents of the public key file into the "Key" field
     - Click on "Add SSH key"
+
+You can configure to use a specific key by using the SSH config file (`~/.ssh/config`).
+```
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+```
 
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*YtHZxDoRGyFi7RVqD8sk9g.png)
 
