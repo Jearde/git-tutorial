@@ -23,4 +23,9 @@
 - Parallel Development:
     - Supports the creation of branches for parallel development of features or bug fixes.
 
-## Git Basics
+## Table of Contents
+- [Git Basics](doc/basics.md)
+- [Working with Branches](doc/branches.md)
+- [Handeling Conflicts](doc/conflicts.md)
+- [Working with remotes](doc/remotes.md)
+- [Best Practices](doc/best_practices.md)

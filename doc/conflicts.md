@@ -1,4 +1,5 @@
 # Handeling Conflicts
+Next section: [Working with remotes](remotes.md)
 
 ## Merge Conflicts
 

@@ -1,4 +1,5 @@
 # Git Basics
+Next section: [Working with Branches](branches.md)
 ## What is Git?
 _Git is a distributed version control system_ (http://git-scm.com/about)
 
@@ -14,6 +15,10 @@ _Git is a distributed version control system_ (http://git-scm.com/about)
 ![An Optimal Git Branching Model](https://mergebase.com/blog/git-v-branching-model/images/git-V.webp)
 
 ## Installing Git
+
+- Test if Git is already installed
+    - `git --version`
+
 ### Linux
 - Debian/Ubuntu: `sudo apt install git`
 ### Windows
@@ -21,6 +26,9 @@ _Git is a distributed version control system_ (http://git-scm.com/about)
 - Follow instructions in installer
 
 ## Configuring Git
+The follwoing commands configure Git on your machine.
+They alter the file `~/.gitconfig` (Linux) or `C:\Users\<username>\.gitconfig` (Windows).
+
 - `git config --global user.name "Your Name"`
     - Sets the name attached to your commits.
 - `git config --global user.email "your.name@example.com"`
@@ -71,6 +79,32 @@ _Git is a distributed version control system_ (http://git-scm.com/about)
         - Restores a file from the specified commit.
 
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*YtHZxDoRGyFi7RVqD8sk9g.png)
+
+## Ignoring Files
+Gitignore files specify intentionally untracked files that Git should ignore. Files already tracked by Git are not affected.
+
+### Local
+```bash
+touch .gitignore
+```
+
+The content can look like this:
+```bash
+# Ignore all files with the extension .txt
+*.txt
+
+# Ignore all files in the directory build
+build/
+
+# Ignore all files in the directory build and all its subdirectories
+build/**
+
+# Ignore all files in the directory build and all its subdirectories except the file build/README.md
+build/**
+!build/README.md
+```
+
+This allows you to use `git add .` or `git commit -a` to add all files except the ones specified in the gitignore file, when configured correctly.
 
 ## Basic Exercises
 ### Exercise 1: Creating a Repository
@@ -130,35 +164,21 @@ git reset HEAD~1
 git log
 ```
 
+### Exercise 4: Ignoring Files
+```bash
+# Create a file that should be ignored
+echo "This file should be ignored" > ignored.log
 
+# Check the status of the repository
+git status
 
+# Exclude all .log files from the repository
+echo "*.log" > .gitignore
 
+# Add the .gitignore file to the repository
+git add .gitignore
+git commit -m "Add .gitignore"
 
-
-
-
-
-
-
-
-
-
-- `git checkout <branch>`
-    - Switches to the specified branch.
-    - `git checkout -b <branch>` (alternative)
-- `git merge <branch>`
-    - Merges the specified branch into the current branch.
-- `git branch`
-    - Lists all branches in the repository.
-    - `git branch <branch>` (alternative)
-- `git remote`
-    - Lists all remotes in the repository.
-    - `git remote add <name> <url>` (alternative)
-- `git push`
-    - Pushes the current branch to the remote repository.
-    - `git push -u <remote> <branch>` (alternative)
-- `git pull`
-    - Pulls the latest changes from the remote repository.
-- `git clone <url>`
-    - Clones a remote repository into a new local repository.
-
+# Check the status of the repository
+git status
+```
