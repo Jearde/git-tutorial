@@ -29,3 +29,4 @@
 - [Handeling Conflicts](doc/conflicts.md)
 - [Working with remotes](doc/remotes.md)
 - [Best Practices](doc/best_practices.md)
+- [Tips and Tricks](doc/additions.md)
