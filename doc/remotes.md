@@ -61,6 +61,8 @@
     - Paste the contents of the public key file into the "Key" field
     - Click on "Add SSH key"
 
+![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*YtHZxDoRGyFi7RVqD8sk9g.png)
+
 ## Remote Exercises
 
 ### Exercise 1: Pushing to a new Remote Repository
@@ -71,3 +73,18 @@
 
 # Add the remote repository
 git remote add origin <url>
+
+# Push the main branch to the remote repository
+# -u sets the upstream branch to origin/main so that you can use "git push" and "git pull" without specifying the remote and branch
+git push -u origin main
+```
+
+### Exercise 2: Cloning a Remote Repository
+- Clone a remote repository
+```bash
+# Clone the remote repository
+git clone <url>
+
+# Switch to the new repository
+cd <repository_name>
+```
