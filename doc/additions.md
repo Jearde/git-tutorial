@@ -31,3 +31,21 @@ Git stores aliases in the `~/.gitconfig` file.
 [alias]
 	update = !git pull && git submodule update --init --recursive
 ```
+
+## Interactive Rebase
+The interactive rebase allows you to edit, squash, delete, and reorder commits.
+
+### Start Interactive Rebase
+```bash
+# Rebase the last 3 commits
+git rebase -i <commit>
+```
+
+### Edit Commit
+```bash
+# Edit the commit
+git commit --amend
+```
+
+## Deploy Keys
+Deploy keys allow read-only or read-write access to a repository. They are useful for automated deployments or continuous integration systems.
