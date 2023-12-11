@@ -94,6 +94,8 @@ git rebase origin/main
 - Assign merge request to reviewer
 - Review the changes
 - Approve the merge request
-- Merge the changes into the main branch
-    - Squash commits (if used in the project)
+- Merge the changes into the main branch (one of the following options)
+    - Merge rule: Create a merge commit
+    - Merge rule: Squash and merge (preferred by me)
+    - Merge rule: Rebase and merge
 - Close the issue
