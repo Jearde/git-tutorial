@@ -69,6 +69,14 @@ Add a new file named world_2.txt to the repository.
 It implements the second part of the "Hello World" example.
 ```
 
+### Squash merge messages
+```
+Merge branch 'feature/feature_1' into main
+
+- Add world_2.txt
+- Improved world_1.txt
+```
+
 ## Implementation Workflow
 - Create an issue with the description of needs to be implemented in GitHub/GitLab
 - (Optional) Add tasks to the description

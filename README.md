@@ -1,5 +1,7 @@
 # Git Tutorial
 
+![DALL-E Git Tree](images/dall-e_git-tree.png)
+
 ## What is Version Control?
 
 **Definition:** Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.

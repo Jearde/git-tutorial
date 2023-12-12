@@ -1,4 +1,15 @@
 # Tips und Tricks
+Back to [Readme](../README.md)
+* Section [GitHub](github.md)
+* Section [GitLab](gitlab.md)
+
+## VS Code Extensions
+
+### GitGraph
+The Git Graph extension allows you to visualize your repository's Git history.
+
+![Git Graph](../images/vs_code_git_graph.png)
+
 
 ## Git Submodule
 Submodules are a way to keep a Git repository as a subdirectory of another Git repository. This allows you to clone another repository into your project and keep your commits separate.
