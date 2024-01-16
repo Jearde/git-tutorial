@@ -29,3 +29,17 @@ Protected branches are available in public and private repositories. They help r
     - Protection can also be extended to prevent accidental deletion of protected branches.
 
 ## GitHub Projects
+Projects help you organize and prioritize your work. You can create project boards for specific feature work, comprehensive roadmaps, or even release checklists. With project boards, you have the flexibility to create customized workflows that suit your needs.
+
+## GitHub Actions
+Actions are individual tasks that you can combine to create jobs and customize your workflow. 
+The jobs can be triggered by events (e.g. push, pull request, ...) or on a schedule.
+They can be used for e.g. automated testing, building, or deployment.
+
+## GitHub Pages
+GitHub Pages is a static site hosting service designed to host your personal, organization, or project pages directly from a GitHub repository.
+They can be used for e.g. documentation, blogs, or websites.
+
+## GitHub Wiki
+Wikis are a good place to store important information that is not directly related to the codebase, but is still relevant to the project.
+They can be used for e.g. documentation, tutorials, or FAQs.

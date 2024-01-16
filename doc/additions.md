@@ -87,3 +87,15 @@ git commit --amend
 
 ## Deploy Keys
 Deploy keys allow read-only or read-write access to a repository. They are useful for automated deployments or continuous integration systems.
+
+## Git Stash
+`git stash` is a command in Git that allows you to temporarily save changes that you have made but do not want to commit yet. It takes your modified tracked files and staged changes, saves them away for later use, and then reverts them to your last commit.
+
+The stash is a place where you can store changes that you don't want to commit immediately. You can return to them later and apply them to your working tree.
+
+Basic usage example:
+- `git stash save "Your message"`: This command stashes your changes and allows you to add a message describing what the stash is for.
+- `git stash list`: This command lists all of your stashes.
+- `git stash apply`: This command applies the most recent stash. You can also specify a stash by its name to apply it.
+- `git stash drop`: This command deletes the most recent stash. You can also specify a stash by its name to delete it.
+- `git stash pop`: This command applies the most recent stash and then immediately drops it from your stash list. You can also specify a stash by its name to pop it.

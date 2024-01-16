@@ -25,6 +25,7 @@ Next section: [More Tips and Tricks](additions.md)
     - Provide constructive feedback and address issues before merging.
 8. Use .gitignore:
     - Utilize a .gitignore file to exclude unnecessary files (build artifacts, logs) from version control.
+    - Do not commit generated files (e.g., compiled binaries, dependencies, etc.) but only the source code.
 9. Tag Releases:
     - Tag releases with version numbers to easily reference specific points in your project's history.
 10. Use Git Hooks:
@@ -37,9 +38,15 @@ Next section: [More Tips and Tricks](additions.md)
     - Use environment variables or configuration files outside version control for such information.
 13. Backup Important Branches:
     - Regularly backup important branches, especially before performing significant rebases or force-pushes.
-14. Use GitHub Issues and Projects:
+14. GitHub Issues and Projects:
     - Leverage GitHub Issues for tracking tasks, bugs, and enhancements.
     - Use GitHub Projects to manage and organize work.
+15. Large (binary) files
+    - Do not commit large files (e.g. PDFs, ML models, videos, ...) to the repository.
+    - Use Git LFS for large files
+16. Use Git Submodules for external dependencies
+    - Do not commit external dependencies to the repository.
+    - Use Git Submodules for external dependencies
 
 ## Naming the repository
 Repository name: 
@@ -110,3 +117,46 @@ git rebase origin/main
     - Merge rule: Rebase and merge
 - Archive (or delete) the branch
 - Close the issue
+
+## Forking Workflow
+A Forking Workflow is a distributed version control workflow that is often used in open source projects and scenarios involving multiple external contributors. It's especially well-suited for projects where all contributors do not have write access to the official repository.
+
+### Using a template as base for a new repository
+This is useful if you want to create a new repository based on an existing one.
+1. Fork the repository
+2. Clone the forked repository
+3. Add the upstream repository (original repository)
+```bash
+git remote add upstream <url>
+```
+4. Make changes to the forked repository
+5. Keep the forked repository up-to-date by pulling changes from the upstream repository
+```bash
+git fetch upstream
+git rebase upstream/main
+```
+6. Push the changes to the forked repository
+
+### Conributing to a repository without write access
+This is useful if you want to contribute to a repository without having write access to it like in open source projects.
+
+1. Fork the repository
+2. Clone the forked repository
+3. Add the upstream repository (original repository)
+```bash
+git remote add upstream <url>
+```
+4.Create a new feature branch
+```bash
+git switch -c <branch>
+```
+5. Make changes to the forked repository
+6. Keep the forked repository up-to-date by pulling changes from the upstream repository
+```bash
+git fetch upstream
+git rebase upstream/main
+```
+7. Push the changes to the forked repository
+8. Create a pull request
+9. Assign pull request to reviewer
+10. ...
