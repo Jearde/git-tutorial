@@ -36,9 +36,15 @@ Actions are individual tasks that you can combine to create jobs and customize y
 The jobs can be triggered by events (e.g. push, pull request, ...) or on a schedule.
 They can be used for e.g. automated testing, building, or deployment.
 
+They are defined by a YAML file in the `.github/workflows` directory.
+
+![Actions](../images/github_actions.png)
+
 ## GitHub Pages
 GitHub Pages is a static site hosting service designed to host your personal, organization, or project pages directly from a GitHub repository.
 They can be used for e.g. documentation, blogs, or websites.
+
+![Actions](../images/github_pages.png)
 
 ## GitHub Wiki
 Wikis are a good place to store important information that is not directly related to the codebase, but is still relevant to the project.
