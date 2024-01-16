@@ -55,7 +55,7 @@ Examples:
 - `ai_git-tutorial_doc`
 
 ## Commit messages
-- Use the imperative mood
+- Use the imperative mood (e.g. Add, Fix, Improve ...)
 - Limit the first line to 50 characters
 - Capitalize the first letter
 - Do not end the first line with a period
@@ -100,10 +100,13 @@ git rebase origin/main
 - Push the changes to the remote repository
 - Create a merge request (when done)
 - Assign merge request to reviewer
-- Review the changes
-- Approve the merge request
+- _Reviewer:_ Review the changes
+- _Reviewer:_ Request changes by commenting on the parts of the code which need to be changed
+- _Reviewer:_ Review the changes again
+- _Reviewer:_ Approve the merge request
 - Merge the changes into the main branch (one of the following options)
     - Merge rule: Create a merge commit
     - Merge rule: Squash and merge (preferred by me)
     - Merge rule: Rebase and merge
+- Archive (or delete) the branch
 - Close the issue

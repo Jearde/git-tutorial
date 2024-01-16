@@ -48,8 +48,35 @@ The interactive rebase allows you to edit, squash, delete, and reorder commits.
 
 ### Start Interactive Rebase
 ```bash
-# Rebase the last 3 commits
-git rebase -i <commit>
+# Rebase the last n commits
+git rebase -i HEAD~n
+```
+Explanation:
+- Each commit is represented by a line in the editor.
+- The first word on each line is the command.
+- The second word on each line is the commit hash.
+- The third word on each line is the commit message.
+
+Changes:
+- `pick` -> `pick`: Keep the commit.
+- `pick` -> `drop`: Delete the commit.
+- `pick` -> `reword`: Change the commit message.
+- `pick` -> `squash`: Combine the commit with the previous commit.
+- `pick` -> `fixup`: Combine the commit with the previous commit and discard the commit message.
+- `pick` -> `edit`: Stop the rebase to edit the commit (amend).
+
+After changing your git history, it might be necessary to use a force push to origin for the next push.
+
+### Continue Interactive Rebase
+```bash
+# Continue the rebase
+git rebase --continue
+```
+
+### Abort Interactive Rebase
+```bash
+# Abort the rebase
+git rebase --abort
 ```
 
 ### Edit Commit
